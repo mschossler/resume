@@ -1,0 +1,454 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+% - Applied conflict resolution strategies, when discussing misconceptions, regradings, etc., with students.
+
+
+%I am a theoretical condensed matter physicist passionate about solving problems using statistics, quantum physics, and data science. Currently, I am fascinated by the fundamentals of machine and deep learning and their potential applications to improve the world. I believe the DLI is the perfect environment to flourish my understanding of the fundamentals of deep learning and to motivate me to endeavor in this field.
+
+
+% I am a theoretical condensed matter physicist passionate about solving problems using statistics, quantum physics, and data science. Currently, I am fascinated by the fundamentals of machine and deep learning and their potential applications. I believe the DLI is an environment to flourish my understanding of the fundamentals of deep learning and to motivate me in this field.
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+
+\usepackage[svgnames]{xcolor}
+\usepackage[hidelinks, colorlinks = true, urlcolor = DarkSlateBlue,]{hyperref}
+% %color hyperlinks
+% \usepackage[colorlinks = true,
+%             linkcolor = blue,
+%             urlcolor  = blue,
+%             citecolor = blue,
+%             anchorcolor = blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage{outlines}
+\usepackage{tikz}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\newcommand{\vspaceDefaultAbove}{\vspace{-2pt}}
+\newcommand{\vspaceDefaultBelow}{\vspace{-7pt}}
+\newcommand{\vspaceDefaultSpace}{\vspace{4pt}}
+
+
+% \usepackage{sectsty,textcase}
+% \allsectionsfont{\MakeTextUppercase}
+% Sections formatting
+% \titleformat{\section}{
+%   \vspace{-8pt}\scshape\raggedright\large\bfseries
+% }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{
+  \vspace{-8pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+\usepackage{ragged2e}
+
+
+\usepackage{setspace}
+% \setstretch{0.9}
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{\justifying
+  \item{{\begin{spacing}{0.96}
+    {#1\vspaceDefaultAbove}\end{spacing}\vspace{0pt}
+  }}
+}
+
+\newcommand{\SubItem}[1]{
+   {\setlength\itemindent{6pt} \item[- \hspace{-6pt}] { #1}}
+}
+
+\newcommand{\resumeSubItem}[1]{
+  \vspaceDefaultAbove\SubItem{
+    {#1 \vspaceDefaultAbove}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item{{
+        {#1 #2 #3 #4 \vspaceDefaultAbove}
+  }}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspaceDefaultAbove\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1\vspace{-1pt}} & \textbf{{#2\vspace{-1pt}}} \\
+      {{#3}} & {{#4}} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{{#1} } & \textit{{#2}} \\
+    \end{tabular*}\vspaceDefaultBelow
+}
+
+%________________________EVENT_______________________________________
+% \newcommand{\resumeEvent}[2]{
+%       \vspaceDefaultAbove\begin{tabular}{ >{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{6.9in} wr{0.8in}}
+%       {\raise .5ex\hbox{\tiny$\bullet\ \ $}}{\hspace{-2pt}  #1}  & \textbf{{ #2}}\\
+%      \end{tabular}\vspace{0pt}
+% }
+
+%\newcommand{\resumeEventListStart}{\begin{itemize}[leftmargin=0.2in]}
+%\newcommand{\resumeEventListEnd}{\end{itemize}}
+%________________________EVENT_______________________________________
+
+
+
+\newcommand{\resumeProjectHeading}[2]{
+      \vspace{-6pt}\item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      {#1} & \textbf{{#2}} \\
+    \end{tabular*}\vspaceDefaultBelow
+}
+
+
+\newcommand{\resumeSubProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.987\textwidth}{l@{\extracolsep{\fill}}r}
+       #1 & { #2}\\
+    \end{tabular*}\vspaceDefaultBelow
+}
+
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize} \vspace{1pt}}
+
+\newcommand{\resumeSubSubHeadingListStart}{\begin{itemize}[leftmargin=0.2in,label={}]}
+\newcommand{\resumeSubSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.125in,rightmargin=0in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspaceDefaultBelow\vspaceDefaultAbove}
+
+\newcommand{\vspaceSectionAbove}{\vspaceDefaultAbove}
+\newcommand{\vspaceSectionBelow}{\vspaceDefaultBelow}
+
+%color hyperlinks
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+% \begin{center}
+% 	{\huge \scshape Matheus Schossler} \\
+% % 	812 Pennsylvania Ave, Saint Louis, MO 63130 \\ \vspace{1pt}
+% 	\href{mailto:mschossler@wustl.edu}{\raisebox{-0.2\height}\faEnvelope\  {mschossler@wustl.edu}} ~
+% % 	{\color{DarkSlateBlue}  \faPhone\ (314)475-0151} ~
+%     \href{tel:+13144750151}{ {\small \faPhone\ (314) 475-0151} } \\
+% 	\href{https://www.linkedin.com/in/mschossler}{\raisebox{-0.2\height}\faLinkedin\ {linkedin.com/in/mschossler}} ~
+% 	\href{https://github.com/mschossler}{\raisebox{-0.2\height}\faGithub\ {github.com/mschossler}} 
+% 	\vspace{-5pt} 
+% \end{center}
+\begin{center}
+	\vspace{-5pt} 
+    \begin{tabular*}{\textwidth}{ccc}
+     ~ ~ ~ ~ ~ ~ & {{\huge \scshape Matheus Schossler}} ~ ~ ~ &
+      \begin{tabular*}{\textwidth}{@{}ll@{}}
+               \href{mailto:mschossler@wustl.edu}{\raisebox{-0.1\height}\faEnvelope\  {mschossler@wustl.edu}} ~ &  \href{https://www.linkedin.com/in/mschossler}{\raisebox{-0.008\height}\faLinkedin\ {linkedin.com/in/mschossler}} \\
+               \href{tel:+13144750151}{ {\small \faPhone\ (314) 475-0151} } & \href{https://github.com/mschossler}{\raisebox{-0.2\height}\faGithub\ {github.com/mschossler}}
+      \end{tabular*} \\
+    \end{tabular*}
+\end{center}
+%
+%
+%---------------------------------------EDUCATION-----------
+\section{\uppercase{Education}}
+%
+\resumeSubHeadingListStart
+\resumeSubheading
+{Washington University in St. Louis}{Aug. 2017 -- Present}
+{PhD Physics Candidate (Dec. 2022) \& MA Physics (Aug. 2019), GPA: 3.96}{Saint Louis, MO, USA}
+\resumeItemListStart
+\resumeItem{Conference on Neural Information Processing Systems ({\small NeurIPS 2021}); Duke Machine Learning Winter School: Computer Vision ({\small MLWS-CV 2022}), used PyTorch; APS March Meeting 2021, 2020 \& 2019.}
+\resumeItem{\emph{Extracurricular:} Machine Learning Club; Diversity, Equity and Inclusion Committee; Physics Department Mentor.}
+\resumeItemListEnd
+\vspaceDefaultSpace
+% \resumeSubheading
+% {Washington University in St. Louis}{Aug. 2017 -- Aug. 2019}
+% {AM Physics, GPA: 3.96}{Saint Louis, MO, USA}
+\resumeSubheading
+{University of S{a}o Paulo}{Feb. 2015 -- Jul. 2017}
+{MSc Physics, GPA: A}{S{a}o Carlos, SP, Brazil}
+%
+\resumeItemListStart
+\resumeItem{Thesis: exact and numerical calculations of quantum spin correlations.[\href{https://www.teses.usp.br/teses/disponiveis/76/76131/tde-15092017-090718/en.php}{link}]\vspaceDefaultAbove}
+\resumeItem{Award {{\small IFT-ICTP-SAIFR} Young Physicist} (South American competition), 4th place, {\small IFT-UNESP}, S{a}o Paulo.}
+\resumeItemListEnd
+\vspaceDefaultSpace
+\resumeSubheading
+{University of S{a}o Paulo}{Mar. 2011 -- Dec. 2014}
+{BSc Physics, GPA: 8.3/10}{S{a}o Carlos, SP, Brazil}%\vspaceDefaultBelow is implicit
+\resumeItemListStart
+\resumeItem{Prize {Yvonne Mascarenhas} for best talk, 2nd place, 2014 Undergraduate Physics Week.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+%
+%--------------------------------------EXPERIENCE-----------
+\section{\uppercase{Experience}}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Centene Corporation}{May 2022 -- Present}
+{Machine Learning Engineer Graduate Intern}{St. Louis, MO, USA}
+\resumeItemListStart
+\resumeItem{Researched features to improve LightGBM model for authorization classification.} %using \emph{linear response theory}, \emph{Feynman diagrams}, and \emph{Mathematica}.}
+%
+\resumeItem{Automated Optuna hyperparameter tuning to improve model predictions with feature selection.}
+\resumeItem{Improved authorization prediction overall accuracy in 0.5\%.}
+\resumeItem{Improved behavioral health class authorization accuracy prediction in 15\%.}
+\resumeItem{Queried data from SQL and MongoDB servers and processed new train and test data sets.}
+% %
+% \resumeItem{Wrote a M.Sc. thesis in LaTeX with various new plots and diagrams, and utilized Bash scripts to organize files. [\href{https://www.teses.usp.br/teses/disponiveis/76/76131/tde-15092017-090718/pt-br.php}{link}]}
+%
+% \resumeItem{Teaching responsibilities as above. Courses: Physics II; Electromagnetism I.}
+\resumeItemListEnd
+%
+\vspaceDefaultSpace
+\resumeSubheading
+{Washington University in St. Louis}{Aug. 2017 -- Present}
+{PhD Researcher in Statistical, Quantum and Computational Physics; and Teaching Assistant}{Saint Louis, MO, USA}
+% \begin{comment}
+\resumeItemListStart
+% \resumeItem{Concluded many projects using PyTorch, TensorFlow, scikit-learn, and SciPy to study time series forecasting, computer vision, natural language processing, and other ML algorithms.}
+%
+\resumeItem{{Developed an exact algorithm to model various topological quantum states with a $\infty$-linked tensor network.[\href{https://arxiv.org/abs/2111.09988}{link}]}}
+%
+\resumeItem{Constructed 4 new self-consistent numerical models in \emph{Python} for statistical inference of experimental data.}
+%
+\resumeItem{Predicted energy levels and probability distributions of quantum states using \emph{parallel computing} with 30x faster calculations.}
+%
+\resumeItem{Conducted extensive data analysis of simulation and real data from experiments at the frontier of  quantum physics knowledge.}
+%
+% \resumeItem{Analyzed scalability of predictions to reliably extract electric field dumping due interactions.}
+%
+\resumeItem{Designed graphics and schematic diagrams for data visualization using \emph{matplotlib}, and \emph{Mathematica}.}
+%
+\resumeItem{Presented results at conferences to 100+ attendees.}
+%                   
+% \resumeItem{Held teaching assistant positions for several courses: Statistical mechanics (graduate level); Electromagnetism II; Adv. mathematical physics I \& II (graduate level); Introductory physics, etc.}
+\resumeItem{Teaching assistant for several courses: Statistical mechanics (graduate level); Electromagnetism II; Adv. mathematical physics I \& II (graduate level); Introductory physics, etc.}
+\resumeItemListEnd
+% \end{comment}
+\begin{comment}
+\resumeItemListStart
+\resumeItem{{Developed an exact algorithm to model various topological quantum states with a $\infty$-linked tensor network for simpler numerical implementation and to replace older and less general frameworks.[\href{https://arxiv.org/abs/2111.09988}{link}]}} %$|$Aug. 2017 -- Present}
+%
+\resumeItem{Constructed 4 new self-consistent numerical models using \emph{Python} for statistical inference of experimental data.}
+%
+\resumeItem{Predicted energy levels and probability distributions of quantum states using \emph{parallel computing} with 30x faster calculations.}
+%
+\resumeItem{Conducted extensive data analysis of simulation and real data from experiments at the frontier of  quantum physics knowledge.}
+%
+\resumeItem{Analyzed scalability of predictions to reliably extract electric field dumping due interactions.}
+%
+\resumeItem{Designed graphics and schematic diagrams for data visualization using \emph{matplotlib}, and \emph{Mathematica}.}
+%
+\resumeItem{Presented results at conferences to 100+ attendees.}
+%
+\resumeItem{Held teaching assistant positions for several courses: Statistical mechanics (graduate level); Electromagnetism II; Adv. mathematical physics I \& II (graduate level); Introductory physics, etc.}
+\resumeItemListEnd
+\end{comment}
+%
+%
+\vspaceDefaultSpace
+\resumeSubheading
+{University of S{a}o Paulo}{Feb. 2015 -- Jul. 2017}
+{MSc Researcher in Statistical, Quantum and Computational Physics; and Teaching Assistant}{S{a}o Carlos, SP, Brazil}
+\resumeItemListStart
+\resumeItem{Developed and applied exact and numerical algorithms to calculate statistical correlations in large quantum systems.} %using \emph{linear response theory}, \emph{Feynman diagrams}, and \emph{Mathematica}.}
+%
+\resumeItem{Implemented gradient descent to predict asymptotic behaviors of correlations.}
+\resumeItem{Tested various numerical models to predict correlations with highly oscillating kernels.}
+% %
+% \resumeItem{Wrote a M.Sc. thesis in LaTeX with various new plots and diagrams, and utilized Bash scripts to organize files. [\href{https://www.teses.usp.br/teses/disponiveis/76/76131/tde-15092017-090718/pt-br.php}{link}]}
+%
+% \resumeItem{Teaching responsibilities as above. Courses: Physics II; Electromagnetism I.}
+\resumeItemListEnd
+%
+% %
+% \resumeSubheading
+% {University of S{a}o Paulo}{Jan. 2014 -- Dec. 2014}
+% {Undergraduate researcher}{S{a}o Carlos, SP, Brazil}
+% \resumeItemListStart
+% \resumeItem{Developed and applied exact algorithms to calculate discrete Fourier transform of correlation functions of a large spin system in the frequency domain.  \href{https://bv.fapesp.br/en/bolsas/147280/dynamics-of-two-body-operators-in-exactly-solvable-spin-chains/}{Scholarship from the S{a}o Paulo Research Foundation}.}
+% \resumeItemListEnd
+% %
+% \resumeSubheading
+% {University of S{a}o Paulo}{Mar. 2013 -- Dec. 2013}
+% {Computer lab supervisor intern - S{a}o Carlos institute of physics}{S{a}o Carlos, SP, Brazil}
+% \resumeItemListStart
+% \resumeItem{Collected usage data as part of a team to optimize hours of operation to match student schedules.}
+% %
+% \resumeItem{Provided tech support, with duties including: assurance of computer security, oversight of software installation and maintenance, and equipment inventory.}
+% % \resumeItem{Assisted in the installation, configuration, and maintenance of software, printers, scanners, and peripherals. Duties included ensuring the security of computers, care of the lab equipment, upkeep of supplies, and providing a smooth operation.}
+% \resumeItemListEnd
+\resumeSubHeadingListEnd
+% \vspaceSectionBelow
+%
+%--------------------------------------SKILLS-----------
+\section{\uppercase{Skills}}
+\textbf{Modeling:}{ statistics, stochastic calculus,  data analysis, machine learning, deep learning, NumPy, pandas, PyTorch, TensorFlow, matplotlib, scikit-learn, SciPy, Mathematical modeling,  parallel computing, time series}
+
+% \textbf{Audited classes in ML:}{ Machine learning, Andrew NG,  Stanford {\small CS229}; Statistical learning theory \& applications, {\small MIT 9.520/6.860}; Fundamentals of deep learning, {\small NVIDIA deep learning inst.}; Deep learning specialization, Andrew NG, {\small Coursera}.}
+
+\textbf{Programming languages$\,$({\small YOE}):}{ Python$\,${\small(5)}, C$\,${\small(1)}, SQL$\,${\small(0.2)}, Matlab$\,${\small(0.3)}, Bash$\,${\small(0.6)}, Fortran$\,${\small(1)}, Wolfram$\,$Mathematica$\,${\small(6)} }%, Bash$\,$(1)
+%  Python, C, Fortran, Bash, SQL, Matlab, Wolfram Mathematica
+
+\textbf{Technologies/Frameworks:}{ Linux, Git, Apache Kafka, Jupyter, PyCharm, Seaborn,  LaTeX}
+
+\textbf{Soft skills:}{ Problem solving, research, detail-focused, self learning, teamwork, communication, teaching}%, Portuguese,  basic Spanish
+
+%
+\vspace{1.5pt}
+%--------------------------------PROJECTS-----------
+\section{\uppercase{Additional Projects}}
+\resumeSubHeadingListStart
+%     
+% 
+% 
+\resumeProjectHeading
+{\textbf{Machine Learning projects} $|$ {PyTorch, TensorFlow, scikit-learn, SciPy, Pandas, Numpy} }{Feb. 2018 -- Present}
+\resumeItemListStart
+\resumeItem{Predicted the most likely customers to churn based on their transaction activity history over a two years period by employing the K-means algorithm to cluster 15,000 businesses according to their attributes. [\href{https://github.com/mschossler/TimeSeriesClustering}{GitHub}]}
+
+\resumeItem{Studied computer vision, natural language processing, and other ML and DL algorithms in small real-world projects using PyTorch, TensorFlow, scikit-learn, and SciPy.}
+\resumeItemListEnd
+%
+\vspaceDefaultAbove
+%
+\resumeProjectHeading
+% {\textbf{Process data from Robinhood to calculate income taxes} $|$\emph{Python, pandas}}{March 2020}
+{\textbf{Robinhood account activity data to Glacier Tax application [\href{https://github.com/mschossler/robinhood-account-activity-data-converter-to-glacier-tax}{GitHub}]} $|$\emph{Python}, \emph{pandas}}{March 2020}
+\resumeItemListStart 
+\resumeItem{Created an app in python for cleaning and processing account activity data from Robinhood to be uploaded to Glacier Tax. The application finds and matches stocks that were sold in 2020 with stocks previously bought to calculate the profit and ultimately income taxes for stocks for nonresident aliens. It also exports the data in the format required to be uploaded into glaciertax.com. I recently started building an API using Flask and Python for better automation.}
+\resumeItemListEnd
+% \resumeProjectHeading
+% {\textbf{Fluctuation relations [\href{https://github.com/mschossler/fluctuation-relations}{GitHub}]} $|$\emph{statistics}, \emph{physics}}{Nov. 2018 -- Dec. 2018}
+% \resumeItemListStart
+% \resumeItem{ Derived the Jarzynski equality fluctuation relation. It connects equilibrium states with non-equilibrium states for various systems by properly accounting the noise for each sample of the ensemble of non-equilibrium trajectories space. Links with machine learning algorithms are pointed out.}
+% \resumeItemListEnd
+%
+\resumeSubHeadingListEnd
+% \vspaceDefaultBelow
+%-----------------------------------PUBLICATIONS-----------
+\section{\uppercase{Selected Publications}}
+\resumeItemListStart
+\resumeItem{ M. Schossler, {et al}. {The inner workings of fractional quantum Hall parent Hamiltonians: An MPS point of view}. 2021.[\href{https://arxiv.org/abs/2111.09988}{link}] \vspaceDefaultAbove\vspaceDefaultAbove}
+%
+%\resumeItem{ B. Russell, M. Schossler, J. Balgley, T. Taniguchi, K. Watanabe, A. Seidel, Y. Barlas, E. Henriksen. Spin-to-valley-polarized transition in bilayer graphene. In progress.}
+%
+\resumeItem{ M. Schossler, M.S. thesis. University of S{a}o Paulo, 2017. {Dynamics of two-spin operators in the XX model.}[\href{https://www.teses.usp.br/teses/disponiveis/76/76131/tde-15092017-090718/en.php}{link}]}
+% \vspaceDefaultAbove\vspaceDefaultAbove} %  Advisor:  Rodrigo Goncalves Pereira.
+% %
+% % \vspaceDefaultAbove
+% \resumeItem{ Six \href{https://scholar.google.com/citations?user=MVXXEdIAAAAJ&hl=en&oi=sra}{conference proceedings}. APS March Meeting 2019, 2020 \& 2021. Physics Week, USP, Sao Carlos, 2014 \& 2015.} 
+% % \resumeItem{ Six conference proceedings. APS March Meeting 2019, 2020 \& 2021. Physics Week, USP, Sao Carlos, 2014 \& 2015. \href{https://scholar.google.com/citations?user=MVXXEdIAAAAJ&hl=en&oi=sra}{Google Scholar}.}
+\resumeItemListEnd
+% \vspace{5pt}
+% \vspaceDefaultAbove
+%-----------------------------------VOLUNTEERING-----------
+\section{\uppercase{Volunteering}}
+BJC HealthCare, as \textbf{Data Manager}; St. Louis Inter-Faith Committee on Latin America {\small (IFCLA)} \& Prof. Sebasti{a}o de Oliveira Rocha, public state high school, as \textbf{English/Portuguese translator}.
+% \textbf{BJC HealthCare}, Data Manager; \textbf{St. Louis Inter-Faith Committee on Latin America {\small (IFCLA)}} \& \textbf{Prof. Sebasti{a}o de Oliveira Rocha, public state high school}, English/Portuguese translator.
+% \resumeSubHeadingListStart
+% \resumeProjectHeading{\textbf{BJC HealthCare}, Data Manager}{Feb. 2021}
+% % 
+% % \vspace{2pt}
+% % \hspace{9pt}Data Manager\vspaceDefaultBelow
+% %{Data Manager}{Saint Louis, MO, USA}
+% % \resumeItemListStart
+% % \resumeItem{Worked as data manager in a vaccination clinic from BJC HealthCare during the COVID-19 pandemic.}
+% % \resumeItemListEnd
+% %
+% \vspace{-18pt}
+% \resumeProjectHeading{\textbf{St. Louis Inter-Faith Committee on Latin America {\small (IFCLA)}}, English/Portuguese translator}{Aug. 2020}
+% % 
+% % \vspace{2pt}
+% % \hspace{9pt}English/Portuguese translator\vspaceDefaultBelow
+% %{English/Portuguese translator}{Saint Louis, MO, USA}
+% % \resumeItemListStart
+% % \resumeItem{Intermediated the distribution of \$500 in aid during the COVID-19 pandemic.}
+% % \resumeItemListEnd
+% %
+% \vspace{-18pt}
+% \resumeProjectHeading{\textbf{Prof. Sebasti{a}o de Oliveira Rocha, public state high school}, English/Portuguese translator}{May 2016 -- June 2016}
+% % 
+% % \vspace{2pt}
+% % \hspace{9pt}English/Portuguese translator\vspaceDefaultBelow
+% %{English/Portuguese translator}{S{a}o Carlos, SP, Brazil}
+% % \resumeItemListStart
+% % \resumeItem{Translated lectures (English/Portuguese) from international exchange students regarding global warming for public high schoolers.}
+% % \resumeItemListEnd
+% \resumeSubHeadingListEnd
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south, yshift=0.2cm, text=gray] at (current page.south) {\small \textit{Updated \today}};
+\end{tikzpicture}
+% % 
+% % {BJC HealthCare}{Feb. 2021}
+% % {Data Manager}{Saint Louis, MO, USA}
+% % \resumeItemListStart
+% % 
+% % \resumeItem{ Worked two days as data manager in a vaccination clinic from BJC HealthCare during the COVID-19 pandemic.}
+\end{document}
